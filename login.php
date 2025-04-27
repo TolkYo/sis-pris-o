@@ -78,14 +78,15 @@ include 'inc/config.php';
                                 <div class="form-input position-relative">
                                     <input class="form-control" type="password" id="txt_senha"
                                            placeholder="*********">
-                                    <div class="show-hide"><span class="show">                         </span></div>
+                                    <div class="show-hide"><span class="show"></span></div><!---->
                                 </div>
                             </div>
-                            <button class="btn btn-primary btn-block w-100" type="button"
-                                onClick="alert('bananoide')">Acessar
-                            </button>
+                            <a href="app/home.php"> <button class="btn btn-warning btn-block w-100" type="button">
+                                Acessar
+                            </button></a>
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>
