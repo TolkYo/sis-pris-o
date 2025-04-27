@@ -65,7 +65,7 @@ $nomeProd = localizaDados($conn ,'produtos', 'nome', 'id_produto = 1');
     </style> 
 </head> 
 <body>
-    <div class="card" style="background-color:LightSteelBlue;">
+    <div class="card-lg" style="background-color:LightSteelBlue;">
         <div class="page-body">
             <div class="container-fluid">
                 <div class="page-title">
