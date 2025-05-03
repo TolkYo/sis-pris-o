@@ -62,34 +62,34 @@ include 'inc/config.php';
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xl-6"><img class="bg-img-cover bg-center" src="imagens/estoque.jpg" alt="bg3"></div>
-        <div class="col-xl-6 p-0">
+        <div id="pag_login"><img class="bg-img-cover bg-center" src="imagens/image.png" alt="bg3">
             <div class="login-card">
-                <div>
-                    <div class="login-main">
-                        
-                        <form class="theme-form" id="form_login">
-                            <div class="form-group">
-                                <label class="col-form-label">Usuário</label>
-                                <input class="form-control" type="text" id="id_usuario" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                            <label class="col-form-label">Senha</label>
-                                <div class="form-input position-relative">
-                                    <input class="form-control" type="password" id="txt_senha"
-                                           placeholder="*********">
-                                    <div class="show-hide"><span class="show"></span></div><!---->
+                    <div>
+                        <div class="login-main">
+                            
+                            <form class="theme-form" id="form_login">
+                                <div class="form-group">
+                                    <label class="col-form-label">Usuário</label>
+                                    <input class="form-control" type="text" id="id_usuario" placeholder="Email">
                                 </div>
-                            </div>
-                            <a> <button class="btn btn-warning btn-block w-100"  type="button">
-                                Acessar
-                            </button></a>
-                        </form>
-                    </div>
+                                <div class="form-group">
+                                <label class="col-form-label">Senha</label>
+                                    <div class="form-input position-relative">
+                                        <input class="form-control" type="password" id="txt_senha"
+                                            placeholder="*********">
+                                        <div class="show-hide"><span class="show"></span></div><!---->
+                                    </div>
+                                </div>
+                                <button class="btn btn-dark btn-block w-100" onclick="//função de login" type="button">
+                                    Acessar
+                                </button>
+                            </form>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
         </div>
+        
     </div>
 </div>
 
