@@ -1,5 +1,7 @@
 <?php
 include 'inc/config.php';
+include 'inc/funcoes/funcoes_basicas.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +72,7 @@ include 'inc/config.php';
                             <form class="theme-form" id="form_login">
                                 <div class="form-group">
                                     <label class="col-form-label">Usuário</label>
-                                    <input class="form-control" type="text" id="id_usuario" placeholder="Email">
+                                    <input class="form-control" type="text" id="txt_email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
                                 <label class="col-form-label">Senha</label>
@@ -80,7 +82,10 @@ include 'inc/config.php';
                                         <div class="show-hide"><span class="show"></span></div><!---->
                                     </div>
                                 </div>
-                                <button class="btn btn-dark btn-block w-100" onclick="//função de login" type="button">
+                                <div>
+                                    <div id="DIV_MSG_LOGIN"></div>
+                                </div>
+                                <button id="btn_login" class="btn btn-dark btn-block w-100" onclick="checa_senha_usuario();" type="button">
                                     Acessar
                                 </button>
                             </form>
@@ -107,6 +112,44 @@ include 'inc/config.php';
     <script src="inc/js/js_script.js"></script>
     <script src="inc/js/js_detentos.js"></script>
 
+    <script>
+        const checa_senha_usuario = () => {
+            //alert('banana');
+            const email = $('#txt_email').val();
+            const senha = $('#txt_senha').val();
+
+            const formData = new FormData();
+            formData.append('senha', senha);
+            formData.append('email', email);
+
+            $.ajax({
+                data: formData,
+                url: 'run/checa_login.php',
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                success: (data) => {
+                    const dados = JSON.parse(data);
+                    if (dados.retorno === 1) {
+                        $("#btn_login").html("hide");
+                        $("#DIV_MSG_LOGIN").html(dados.mensagemSucesso);
+                        setTimeout(() => {
+                            $("#DIV_MSG_LOGIN").html('');                            
+                        },
+                        reDireciona('app/home.php')
+                        , 3000);
+                    } else {
+                        $("#btn_login").html("hide");
+                        $("#DIV_MSG_LOGIN").html(dados.mensagemErro);
+                        setTimeout(() => {
+                            $("#DIV_MSG_LOGIN").html('');
+                        }, 3000);
+                        $("#btn_login").html("hide");
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 
 

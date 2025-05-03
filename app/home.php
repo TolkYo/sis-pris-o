@@ -1,7 +1,7 @@
 <?php
 include '../inc/config.php';
 include '../inc/funcoes/funcoes_basicas.php';
-include 'inc/modais/modal_cadastro.php';
+include '../inc/modais/modal_cadastro.php';
 
 //$nomeProd = localizaDados($conn ,'produtos', 'nome', 'id_produto = 1');
 //echo $nomeProd;exit;
@@ -12,7 +12,7 @@ include 'inc/modais/modal_cadastro.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>...</title>
 
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -66,19 +66,7 @@ include 'inc/modais/modal_cadastro.php';
     </style> 
 </head> 
 <body>
-    <div class="card-lg" style="background-color:LightSteelBlue;">
-        <div class="page-body">
-            <div class="container-fluid">
-                <div class="page-title">
-                    <div class="card-body">
-                        <form class="theme-form" id="FRM-CAD">
-                            <button class="btn btn-primary btn-block w-100" type="button" onClick="solicita_senha()">Registrar Venda </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     
 
     
