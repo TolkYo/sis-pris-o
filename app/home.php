@@ -1,8 +1,9 @@
 <?php
 include '../inc/config.php';
 include '../inc/funcoes/funcoes_basicas.php';
+include 'inc/modais/modal_cadastro.php';
 
-$nomeProd = localizaDados($conn ,'produtos', 'nome', 'id_produto = 1');
+//$nomeProd = localizaDados($conn ,'produtos', 'nome', 'id_produto = 1');
 //echo $nomeProd;exit;
 ?>
 
@@ -107,5 +108,10 @@ $nomeProd = localizaDados($conn ,'produtos', 'nome', 'id_produto = 1');
 <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
 <script src="../assets/js/script.js"></script>
 
+<script>//Por onclick="chama_modal_cad_detento();" para chamar a modal
+    const chama_modal_cad_detento = () => {
+        $("#modal_cadastra_presidiario").modal("show");
+    }
+</script>
 </body>
 </html>

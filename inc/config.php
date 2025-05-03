@@ -7,7 +7,7 @@ ini_set('upload_max_filesize', '200M');
 $host = "127.0.0.1";
 $usuario = "root";
 $senha = "dinobel2";
-$banco = "estoque";
+$banco = "bd_prisao";
 
 
 $conn = new mysqli($host, $usuario, $senha, $banco) or die("Falha na conexão: " . $conn->connect_error);

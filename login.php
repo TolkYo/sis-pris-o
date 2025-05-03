@@ -81,7 +81,7 @@ include 'inc/config.php';
                                     <div class="show-hide"><span class="show"></span></div><!---->
                                 </div>
                             </div>
-                            <a href="app/home.php"> <button class="btn btn-warning btn-block w-100" type="button">
+                            <a> <button class="btn btn-warning btn-block w-100"  type="button">
                                 Acessar
                             </button></a>
                         </form>
@@ -105,7 +105,7 @@ include 'inc/config.php';
     <!-- Theme js-->
     <script src="assets/js/script.js"></script>
     <script src="inc/js/js_script.js"></script>
-
+    <script src="inc/js/js_detentos.js"></script>
 
 </body>
 
