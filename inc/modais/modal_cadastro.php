@@ -17,12 +17,12 @@
                                         <label class="col-form-label pt-0"
                                             for="cpf_detento"><b>CPF*</b></label>
                                         <input class="form-control" id="cpf_detento"
-                                            type="text" aria-describedby="emailHelps"
-                                            placeholder="CPF" type="number">
+                                            type="number" aria-describedby="emailHelps"
+                                            placeholder="CPF">
                                     </div>
                                     <div class="col-xl-8"><br>
                                         <label class="col-form-label pt-0"
-                                            for="nome_detento"><b>Nome do Petento*</b> sem abreviação</label>
+                                            for="nome_detento"><b>Nome do Detento*</b> sem abreviação</label>
                                         <input class="form-control" id="nome_detento"
                                             type="text" aria-describedby="emailHelps"
                                             placeholder="Nome completo">

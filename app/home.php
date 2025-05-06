@@ -2,7 +2,13 @@
 include '../inc/config.php';
 include '../inc/funcoes/funcoes_basicas.php';
 include '../inc/modais/modal_cadastro.php';
+include '../inc/funcoes/funcao.php';
 
+$nome = '';
+
+if (!$nome) {
+    $nome = '';
+}
 //$nomeProd = localizaDados($conn ,'produtos', 'nome', 'id_produto = 1');
 //echo $nomeProd;exit;
 ?>
@@ -70,6 +76,9 @@ include '../inc/modais/modal_cadastro.php';
     <form>
         <button id="btn_cad" class="btn btn-dark btn-block w-100" type="button" onclick="chama_modal_cad_detento();">Clica aí</button>
     </form>
+    <div>
+        <?php echo lista_presos($nome, $conn);?>
+    </div>
 
     
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
