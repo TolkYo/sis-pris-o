@@ -18,7 +18,7 @@
                                             for="cpf_detento"><b>CPF*</b></label>
                                         <input class="form-control" id="cpf_detento"
                                             type="text" aria-describedby="emailHelps"
-                                            placeholder="CPF" onchange="checa_cadastro('CPF');">
+                                            placeholder="CPF" type="number">
                                     </div>
                                     <div class="col-xl-8"><br>
                                         <label class="col-form-label pt-0"
@@ -85,12 +85,12 @@
                                         <label for="tipo_crime"><b>Tipo de Crime</b></label><br>
                                         <select id="tipo_crime" class="form-select" aria-label="Default select example">
                                             <option value="0"> Escolha um tipo de Crime</option>
-                                            <option value="Roubo"> Roubo</option>
-                                            <option value="Assalto"> Assalto</option>
-                                            <option value="Assassinato"> Assassinato</option>
-                                            <option value="Estelionato"> Estelionato</option>
-                                            <option value="Latrocínio"> Latrocínio</option>
-                                            <option value="Agressão"> Agressão</option>
+                                            <option value="1"> Roubo</option>
+                                            <option value="2"> Assalto</option>
+                                            <option value="3"> Assassinato</option>
+                                            <option value="4"> Estelionato</option>
+                                            <option value="5"> Latrocínio</option>
+                                            <option value="6"> Agressão</option>
                                         </select>
                                     </div>                                  
                                 </div>

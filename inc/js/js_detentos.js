@@ -1,6 +1,6 @@
 const grava_detento = () => {
     //const idDetento = $("#id_beneficiario").val();    
-    const cpfDetento = $("#cpf_beneficiario").val();    
+    const cpfDetento = $("#cpf_detento").val();    
     const nomeDetento = $("#nome_detento").val();
     //const nomeSocial = $("#nome_social").val();
     const dataNascimento = $("#data_nascimento").val();
@@ -38,7 +38,8 @@ const grava_detento = () => {
                 $("#DIV_MSG_CAD_DETENTO_GERAL").html(dados.mensagemSucesso);
                 setTimeout(() => {
                     $("#DIV_MSG_CAD_DETENTO_GERAL").html('');
-                    $("#modal_cad_beneficiario").modal("hide");
+                    $("#modal_cadastra_presidiario").modal("hide");
+                    $("#FRM_CAD_PRESIDIARIO").modal('');
                     //window.location.reload();
                 }, 3000);
             } else {

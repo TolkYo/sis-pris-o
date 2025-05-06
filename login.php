@@ -131,7 +131,7 @@ include 'inc/funcoes/funcoes_basicas.php';
                 success: (data) => {
                     const dados = JSON.parse(data);
                     if (dados.retorno === 1) {
-                        $("#btn_login").html("hide");
+                        $("#btn_login").hide();
                         $("#DIV_MSG_LOGIN").html(dados.mensagemSucesso);
                         setTimeout(() => {
                             $("#DIV_MSG_LOGIN").html('');                            
@@ -139,12 +139,12 @@ include 'inc/funcoes/funcoes_basicas.php';
                         reDireciona('app/home.php')
                         , 3000);
                     } else {
-                        $("#btn_login").html("hide");
+                        $("#btn_login").hide();
                         $("#DIV_MSG_LOGIN").html(dados.mensagemErro);
                         setTimeout(() => {
                             $("#DIV_MSG_LOGIN").html('');
                         }, 3000);
-                        $("#btn_login").html("hide");
+                        $("#btn_login").show();
                     }
                 }
             });
