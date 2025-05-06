@@ -67,7 +67,9 @@ include '../inc/modais/modal_cadastro.php';
 </head> 
 <body>
     
-    
+    <form>
+        <button id="btn_cad" class="btn btn-dark btn-block w-100" type="button" onclick="chama_modal_cad_detento();">Clica aí</button>
+    </form>
 
     
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
@@ -95,6 +97,7 @@ include '../inc/modais/modal_cadastro.php';
 <script src="../assets/js/typeahead-search/handlebars.js"></script>
 <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
 <script src="../assets/js/script.js"></script>
+<script src="../inc/js/js_detentos.js"></script>
 
 <script>//Por onclick="chama_modal_cad_detento();" para chamar a modal
     const chama_modal_cad_detento = () => {

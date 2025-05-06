@@ -8,7 +8,7 @@
                     <h4 class="modal-title"><i class="fa fa-plus fa-fw"></i>Cadastrar Presidiário</h4>
                 </div>
 
-                <div class="card" style="background-color:LightSteelBlue;">
+                <div class="card" style="background-color:Gray;">
                     <div class="card-body">
                         <div id="div_check_cns">
                             <form class="theme-form" id="FRM_CAD_PRESIDIARIO">
@@ -59,6 +59,41 @@
                                             placeholder="Nome da Mãe">
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-xl-4"><br>
+                                        <label for="pavilhao"><b>Escolha um Pavilhão*</b></label><br>
+                                        <select id="pavilhao" class="form-select" aria-label="Default select example">
+                                            <option value="0"> Escolha um Pavilhão</option>
+                                            <option value="A"> Pavilhão A</option>
+                                            <option value="B"> Pavilhão B</option>
+                                            <option value="C"> Pavilhão C</option>
+                                        </select>
+                                    </div> 
+                                    <div class="col-xl-4"><br>
+                                        <label for="cela"><b>Escolha uma Cela*</b></label><br>
+                                        <select id="cela" class="form-select" aria-label="Default select example">
+                                            <option value="0"> Escolha uma Cela</option>
+                                            <option value="1"> Cela 1</option>
+                                            <option value="2"> Cela 2</option>
+                                            <option value="3"> Cela 3</option>
+                                            <option value="4"> Cela 4</option>
+                                            <option value="5"> Cela 5</option>
+                                            <option value="6"> Cela 6</option>
+                                        </select>
+                                    </div> 
+                                    <div class="col-xl-4"><br>
+                                        <label for="tipo_crime"><b>Tipo de Crime</b></label><br>
+                                        <select id="tipo_crime" class="form-select" aria-label="Default select example">
+                                            <option value="0"> Escolha um tipo de Crime</option>
+                                            <option value="Roubo"> Roubo</option>
+                                            <option value="Assalto"> Assalto</option>
+                                            <option value="Assassinato"> Assassinato</option>
+                                            <option value="Estelionato"> Estelionato</option>
+                                            <option value="Latrocínio"> Latrocínio</option>
+                                            <option value="Agressão"> Agressão</option>
+                                        </select>
+                                    </div>                                  
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -68,7 +103,7 @@
                                 <div id="DIV_MSG_CAD_DETENTO_GERAL"></div>
                             </div>
                             <div class="col-lg-2 text-end">
-                                <button class="btn btn-primary" onclick="grava_detento();"><i class="fa fa-floppy-o"></i> Gravar</button>
+                                <button class="btn btn-dark" onclick="grava_detento();"><i class="fa fa-floppy-o"></i> Gravar</button>
                             </div>
                         </div>                            
                     </div>
