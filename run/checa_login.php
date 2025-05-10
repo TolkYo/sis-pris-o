@@ -17,6 +17,7 @@ if($senhaBd == $senha && $emailBd == $email && $pdeLogar == 'S'){
     <b>Brabo</b>
     <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
+    $retornoJSON['url'] = 'app/index.php?nav=1';
     echo $processaJSON = json_encode($retornoJSON);
     exit;
 }else{

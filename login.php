@@ -132,12 +132,9 @@ include 'inc/funcoes/funcoes_basicas.php';
                     const dados = JSON.parse(data);
                     if (dados.retorno === 1) {
                         $("#btn_login").hide();
-                        $("#DIV_MSG_LOGIN").html(dados.mensagemSucesso);
-                        setTimeout(() => {
-                            $("#DIV_MSG_LOGIN").html('');                            
-                        },
-                        reDireciona('app/home.php')
-                        , 3000);
+                        $("#DIV_MSG_LOGIN").html(dados.mensagemSucesso);                
+                        $("#DIV_MSG_LOGIN").html('');                                                    
+                        reDireciona(dados.url);
                     } else {
                         $("#btn_login").hide();
                         $("#DIV_MSG_LOGIN").html(dados.mensagemErro);
