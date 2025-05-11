@@ -38,7 +38,7 @@ function lista_presos($nome, $conn)
                     <td>
                         <div class="btn-group" role="group">
                             <div class="btn-group" role="group">
-                                <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">'
+                                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">'
                                 . sprintf('%05s', $id_preso) . '</button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="javascript:void(0)" onclick="detalhes_preso(\'EDIT\', ' . $id_preso . ')">
