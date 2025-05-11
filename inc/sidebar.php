@@ -23,18 +23,18 @@
 
     <ul class="list-unstyled components">
       <li class="active">
-        <a href="#">Dashboard</a>
+        <a href="../app/home.php">Dashboard</a>
       </li>
       <li>
         <a href="#">Cadastro</a>
-        <a href="#">Bolas</a>
-        <a href="#">Lula</a>
-        <a href="#">amostradinho</a>
+        <a href="#">Visitas</a>
+        <a href="#">Relatorios</a>
+        <hide href="#"></>
       </li>  
     </ul>
 
     <ul class="list-unstyled CTAs">
-      <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Logout</a></li>
+      <li><a href="../login.php" class="article">Logout</a></li>
     </ul>
   </nav>
 

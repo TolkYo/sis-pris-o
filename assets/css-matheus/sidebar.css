@@ -59,7 +59,7 @@ a:focus {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #01497c;
+  background: #313131;
   color: #fff;
   transition: all 0.3s;
 }
@@ -77,7 +77,7 @@ a:focus {
 /*Cabeçalho da sidebar */
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #013a63;
+  background: #363636;
 }
 
 #sidebar ul.components {
@@ -150,7 +150,7 @@ a.download {
 
 a.article,
 a.article:hover {
-  background: #014f86 !important;
+  background: #013a63 !important;
   color: #fff !important;
 }
 
