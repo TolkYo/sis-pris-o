@@ -13,7 +13,7 @@
 
   </head>
   <body>
-    <div class="wrapper">
+<div class="wrapper">
   <!-- Sidebar Holder -->
   <nav id="sidebar">
     <div class="sidebar-header">
@@ -43,7 +43,9 @@
           <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
             <i class="glyphicon glyphicon-align-left"></i>
           </button>
-
+          <!--Conteudo fica aqui(eu acho)-->
+  </div>
+</div>
     <script src="../inc/js/js_sidebar.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
