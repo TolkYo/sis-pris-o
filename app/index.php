@@ -13,4 +13,6 @@ if ($nav == 0) {
     include 'home.php';
 }elseif($nav == 2){
     include 'detentos-cad.php';
+}elseif($nav == 3){
+    include 'visitas.php';
 }

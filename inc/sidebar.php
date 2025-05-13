@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,24 +18,24 @@
   <!-- Sidebar Holder -->
   <nav id="sidebar">
     <div class="sidebar-header">
-      <h3>Sistema Presidiario</h3>
+      <h3>Sistema Presidiário</h3>
       
     </div>
 
     <ul class="list-unstyled components">
       <li class="active">
-        <a href="../app/home.php">Dashboard</a>
+        <a href="?nav=1">Principal</a>
       </li>
       <li>
-        <a href="#">Cadastro</a>
+        <a href="?nav=2">Cadastro</a>
         <a href="#">Visitas</a>
-        <a href="#">Relatorios</a>
+        <a href="#">Relatórios</a>
         <hide href="#"></>
       </li>  
     </ul>
 
     <ul class="list-unstyled CTAs">
-      <li><a href="../login.php" class="article">Logout</a></li>
+      <li><a href="?nav=0" class="article">Logout</a></li>
     </ul>
   </nav>
 
@@ -51,5 +52,6 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="../inc/js/js_script.js"></script>
   </body>
 </html>

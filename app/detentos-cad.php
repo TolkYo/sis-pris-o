@@ -92,12 +92,10 @@ if (!$nome) {
                                                 <div class="col-lg-3">
                                                     <input class="form-control" id="nomeBeneficiario" type="text" placeholder="Nome do Detento">
                                                 </div>
-                                                <div class="col-lg-3" align="right">
-                                                    <button id="btn_cad" class="btn btn-dark btn-block" type="button" onclick="chama_modal_cad_detento();"><i class="fa fa-search"></i> Procurar</button>
-                                                </div> 
-                                                <div class="col-lg-3">
-                                                    <button id="btn_cad" class="btn btn-dark btn-block" type="button" onclick="chama_modal_cad_detento();"><i class="fa fa-plus"></i> Cadastrar</button>
-                                                </div>                                                                                                    
+                                                <div class="col-lg-3 mt-2" align="left">
+                                                    <button id="btn_search" class="btn btn-dark" type="button" onclick=""><i class="fa fa-search"></i></button>&nbsp;
+                                                    <button id="btn_cad" class="btn btn-success" type="button" onclick="chama_modal_cad_visita();"><i class="fa fa-plus"></i></button>&nbsp;
+                                                </div>                                                                                               
                                             </div>
                                         </div>
                                     </div>

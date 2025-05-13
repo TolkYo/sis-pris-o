@@ -4,11 +4,7 @@ include '../inc/funcoes/funcoes_basicas.php';
 include '../inc/modais/modal_cad_visitas.php';
 include '../inc/funcoes/funcao.php';
 
-$nome = '';
 
-if (!$nome) {
-    $nome = '';
-}
 //$nomeProd = localizaDados($conn ,'produtos', 'nome', 'id_produto = 1');
 //echo $nomeProd;exit;
 ?>
@@ -27,7 +23,6 @@ if (!$nome) {
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="../assets/images/favicon/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="../assets/images/favicon/favicon.png" type="image/x-icon">
-    <title></title>
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link
@@ -58,19 +53,9 @@ if (!$nome) {
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
-    <style>
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-    </style> 
 </head> 
 <body>
-   <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+<div class="tap-top"><i data-feather="chevrons-up"></i></div>
 <div class="loader-wrapper"><div class="loader"></div></div>
 
 <div class="page-wrapper compact-wrapper" id="pageWrapper">
@@ -85,14 +70,51 @@ if (!$nome) {
             <div class="container-fluid">
                 <div class="page-title">
                     <div class="row">
-                        <div class="col-lg-3">
-                            <button id="btn_cad" class="btn btn-dark btn-block" type="button" onclick="chama_modal_cad_visitas();"><i class="fa fa-plus"></i> Cadastrar</button>
-                        </div> 
-                         <?php echo lista_presos($nome, $conn); ?>
+                        
                     </div>
                 </div>
 
-                <div class="container-fluid default-page">        
+                <div class="container-fluid default-page">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <input class="form-control" id="cpfBeneficiario" type="text" placeholder="Número da Visita">
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <input class="form-control" id="nomeBeneficiario" type="text" placeholder="Nome do Detento">
+                                                </div>   
+                                                 <div class="col-lg-3 mt-2" align="left">
+                                                    <button id="btn_search" class="btn btn-dark" type="button" onclick=""><i class="fa fa-search"></i></button>&nbsp;
+                                                    <button id="btn_cad" class="btn btn-success" type="button" onclick="chama_modal_cad_visita();"><i class="fa fa-plus"></i></button>&nbsp;
+                                                </div>                                                                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header pb-0">
+                                    <h5>Visitas Cadastradas</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div id="tabela-dados-cids">
+                                        <?php ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -132,9 +154,11 @@ if (!$nome) {
 <script src="../inc/js/js_detentos.js"></script>
 
 <script>
-    const chama_modal_cad_visitas = () => {
-        $("#modal_cadastra_visitas").modal("show");
-    }
+function chama_modal_cad_visita() {    
+    $("#FRM_CAD_VISITAS").trigger("reset");    
+    $("#modal_cadastra_visitas").modal("show");
+}
 </script>
+
 </body>
 </html>
