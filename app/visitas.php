@@ -63,10 +63,10 @@ include '../inc/funcoes/funcao.php';
     <div class="page-body-wrapper">
         <div class="sidebar-wrapper">
             <div>
-                <?php //include '../inc/sidebar.php'; ?>
+                <?php include '../inc/sidebar.php'; ?>
             </div>
         </div>
-        <div class="page-body">
+        <div class="page-body" style="background-color:Lightgray;">
             <div class="container-fluid">
                 <div class="page-title">
                     <div class="row">
@@ -77,7 +77,7 @@ include '../inc/funcoes/funcao.php';
                 <div class="container-fluid default-page">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="card">
+                            <div class="card" style="background-color:Gray;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -151,7 +151,7 @@ include '../inc/funcoes/funcao.php';
 <script src="../assets/js/typeahead-search/handlebars.js"></script>
 <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
 <script src="../assets/js/script.js"></script>
-<script src="../inc/js/js_detentos.js"></script>
+<script src="../inc/js/js_funcoes.js"></script>
 
 <script>
 function chama_modal_cad_visita() {    

@@ -78,7 +78,7 @@ if (!$nome) {
     <div class="page-body-wrapper">
         <div class="sidebar-wrapper">
             <div>
-                <?php //include '../inc/sidebar.php'; ?>
+                <?php include '../inc/sidebar.php'; ?>
             </div>
         </div>
         <div class="page-body">
@@ -98,7 +98,7 @@ if (!$nome) {
         </div>
 
         <footer class="footer">
-            <?php //include '../inc/rodape.php'; ?>
+            <?php include '../inc/rodape.php'; ?>
         </footer>
     </div>
 </div>

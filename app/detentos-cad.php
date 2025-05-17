@@ -57,6 +57,7 @@ if (!$nome) {
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css-matheus/sidebar.css">
 </head> 
 <body>
 <div class="tap-top"><i data-feather="chevrons-up"></i></div>
@@ -70,7 +71,7 @@ if (!$nome) {
                 <?php //include '../inc/sidebar.php'; ?>
             </div>
         </div>
-        <div class="page-body">
+        <div class="page-body" style="background-color:Lightgray;">
             <div class="container-fluid">
                 <div class="page-title">
                     <div class="row">
@@ -81,7 +82,7 @@ if (!$nome) {
                 <div class="container-fluid default-page">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="card">
+                            <div class="card" style="background-color:Gray;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -93,8 +94,8 @@ if (!$nome) {
                                                     <input class="form-control" id="nomeBeneficiario" type="text" placeholder="Nome do Detento">
                                                 </div>
                                                 <div class="col-lg-3 mt-2" align="left">
-                                                    <button id="btn_search" class="btn btn-dark" type="button" onclick=""><i class="fa fa-search"></i></button>&nbsp;
-                                                    <button id="btn_cad" class="btn btn-success" type="button" onclick="chama_modal_cad_visita();"><i class="fa fa-plus"></i></button>&nbsp;
+                                                    <button id="btn_search" class="btn btn-dark" type="button" onclick=""><i class="fa fa-search"></i> Procurar</button>&nbsp;
+                                                    <button id="btn_cad" class="btn btn-success" type="button" onclick="chama_modal_cad_detento();"><i class="fa fa-plus"></i> Cadastrar</button>&nbsp;
                                                 </div>                                                                                               
                                             </div>
                                         </div>
@@ -134,7 +135,6 @@ if (!$nome) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="../assets/js/bootstrap/popper.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="../inc/js/js_script.js"></script>
 <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
 <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
 <script src="../assets/js/scrollbar/simplebar.js"></script>
@@ -146,9 +146,9 @@ if (!$nome) {
 <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>
 <script src="../assets/js/prism/prism.min.js"></script>
 <script src="../assets/js/clipboard/clipboard.min.js"></script>
-<script src="../assets/js/custom-card/custom-card.js"></script>
+<script src="../assets/js/custom-card/custom-card.js"></script><!--
 <script src="../assets/js/notify/bootstrap-notify.min.js"></script>
-<script src="../assets/js/notify/index.js"></script>
+<script src="../assets/js/notify/index.js"></script>--->
 <script src="../assets/js/typeahead/handlebars.js"></script>
 <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
 <script src="../assets/js/typeahead/typeahead.custom.js"></script>
@@ -156,6 +156,7 @@ if (!$nome) {
 <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
 <script src="../assets/js/script.js"></script>
 <script src="../inc/js/js_detentos.js"></script>
+
 
 <script>
 function chama_modal_cad_detento() {    

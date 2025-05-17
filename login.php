@@ -147,6 +147,16 @@ include 'inc/funcoes/funcoes_basicas.php';
             });
         }
     </script>
+
+    <script>
+        var input = document.getElementById("txt_senha");
+        input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("btn_login").click();
+        }
+        });
+    </script>
 </body>
 
 

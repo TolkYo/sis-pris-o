@@ -40,7 +40,7 @@ const grava_detento = () => {
                     $("#DIV_MSG_CAD_DETENTO_GERAL").html('');
                     $("#modal_cadastra_presidiario").modal("hide");
                     $("#FRM_CAD_PRESIDIARIO").modal('');
-                    //window.location.reload();
+                    window.location.reload();
                 }, 3000);
             } else {
                 $("#DIV_MSG_CAD_DETENTO_GERAL").html(dados.mensagemErro);
