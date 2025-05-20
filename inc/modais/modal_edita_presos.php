@@ -40,8 +40,15 @@
                                         <label class="col-form-label pt-0"
                                                 for="estado_civil"><b>Estado Civil*</b>
                                         </label>
-                                        <input class="form-control" id="txt_estado_civil"
-                                            type="text" aria-describedby="emailHelps" placeholder="Estado Civil">
+                                        <select id="txt_estado_civil" class="form-select" aria-label="Default select example">
+                                            <option value="0"> Escolha um Pavilhão</option>
+                                            <option value="1"> Casado</option>
+                                            <option value="2"> Divorciado</option>
+                                            <option value="3"> Separado Judicialmente</option>
+                                            <option value="4"> Solteiro</option>
+                                            <option value="5"> Viúvo</option>
+                                            <option value="6"> União Estável</option>
+                                        </select>
                                     </div>                                                                                                                                                        
                                 </div>                               
                                 <div class="row">
@@ -101,7 +108,7 @@
                     <div class="card-footer text-end">
                         <div class="row">
                             <div class="col-lg-10 text-start">
-                                <div id="DIV_MSG_CAD_DETENTO_GERAL"></div>
+                                <div id="DIV_MSG_EDIT_DETENTO_GERAL"></div>
                             </div>
                             <div class="col-lg-2 text-end">
                                 <button class="btn btn-dark" onclick="edita_detento();"><i class="fa fa-floppy-o"></i> Gravar</button>

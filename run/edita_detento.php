@@ -6,15 +6,13 @@ $id_preso = $_POST['id_preso'];
 $cpfDetento = desformataCampos(trim($_POST['cpfDetento']));
 $nomeDetento = strtoupper(trim($_POST['nomeDetento']));
 $dataNascimento = $_POST['dataNascimento'];
-$nomePai = strtoupper(trim($_POST['nomePai']));
 $nomeMae = strtoupper(trim($_POST['nomeMae']));
-$estadoCivil = strtoupper(trim($_POST['estadoCivil']));
+$estadoCivil = $_POST['estadoCivil'];
 $pavilhao = $_POST['pavilhao'];
 $numCela = $_POST['cela'];
 $tpoCrime = $_POST['crime'];
 
 $compriNomeDet = strlen($nomeDetento);
-$compriNomePai = strlen($nomePai);
 $compriNomeMae = strlen($nomeMae);
 
 //echo $estadoCivil;exit;
@@ -109,16 +107,6 @@ if($compriNomeMae < 7){
     </div>';
     echo $processaJSON = json_encode($retornoJSON);
 }
-if($nomePai){
-    if($compriNomeMae < 7){
-        $retornoJSON['retorno'] = 0;
-        $retornoJSON['mensagemErro'] = '<div class="alert alert-warning inverse alert-dismissible fade show" role="alert"><i class="fa fa-exclamation-triangle"></i> 
-        <b>O nome do Pai está muito curto!</b>
-        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
-        echo $processaJSON = json_encode($retornoJSON);
-    }
-}
 //echo $processaJSON = json_encode($retornoJSON);
 
 $sqlP = "
@@ -135,23 +123,24 @@ $sqlP = "
     id_infracao = '$tpoCrime'
     WHERE id_preso = '$id_preso'
 ";
-
+//echo $sqlP;exit;
 //$execute = pg_query($sqlP) or die('Erro ao inserir dados do beneficiário: ' . pg_last_error());
 $execute = mysqli_query($conn, $sqlP) or die('Erro ao inserir dados do detento: ' . mysqli_error($conn));
-$row = mysqli_fetch_assoc($execute);
-$idPreso = $row['id_preso'];
+$row = mysqli_affected_rows($conn);
+//
 
-if($idPreso > 0){
+
+if($row > 0){
     $retornoJSON['retorno'] = 1;
     $retornoJSON['mensagemSucesso'] = '<div class="alert alert-success inverse alert-dismissible fade show" role="alert"><i class="fa fa-exclamation-triangle"></i> 
-    <b>Detento cadastrado com Sucesso!</b>
+    <b>Sucesso ao Atualizar dados do Detento!</b>
     <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
     echo $processaJSON = json_encode($retornoJSON);
 }else{
     $retornoJSON['retorno'] = 0;
     $retornoJSON['mensagemErro'] = '<div class="alert alert-warning inverse alert-dismissible fade show" role="alert"><i class="fa fa-exclamation-triangle"></i> 
-    <b>Erro ao Cadastrar novo Detento!</b>
+    <b>Erro ao Atualizar dados do Detento!</b>
     <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
     echo $processaJSON = json_encode($retornoJSON);
