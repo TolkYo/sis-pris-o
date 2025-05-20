@@ -41,7 +41,7 @@ function lista_presos($nome, $conn)
                                 <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">'
                                 . sprintf('%05s', $id_preso) . '</button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0)" onclick="detalhes_preso(\'EDIT\', ' . $id_preso . ')">
+                                    <a class="dropdown-item" href="javascript:void(0)" onclick="chama_modal_edit_detento(' . $id_preso . ')">
                                         <b><i class="fa fa-folder-open"></i> Abrir</b>
                                     </a>
                                 </div>
@@ -50,7 +50,6 @@ function lista_presos($nome, $conn)
                     </td>
                     <td>' . $cpf . '</td>
                     <td>' . $nome . '</td>
-                    <td>' . $data_nascimento . '</td>
                     <td>' . $pavilhao . '</td>
                     <td>' . $cela . '</td>
                 </tr>
@@ -65,7 +64,6 @@ function lista_presos($nome, $conn)
                           <th>ID</th>
                           <th>CPF</th>
                           <th>Nome</th>
-                          <th>Data de Nascimento</th>
                           <th>Pavilhão</th>
                           <th>Cela</th>
                       </tr>
@@ -84,7 +82,6 @@ function lista_presos($nome, $conn)
                       <th>ID</th>
                       <th>CPF</th>
                       <th>Nome</th>
-                      <th>Data de Nascimento</th>
                       <th>Pavilhão</th>
                       <th>Cela</th>
                   </tr>

@@ -3,6 +3,7 @@ include '../inc/config.php';
 include '../inc/funcoes/funcoes_basicas.php';
 include '../inc/modais/modal_cadastro.php';
 include '../inc/funcoes/funcao.php';
+include '../inc/modais/modal_edita_presos.php';
 
 $nome = '';
 
@@ -85,7 +86,7 @@ if (!$nome) {
                             <div class="card" style="background-color:Gray;">
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-12">                                            
                                             <div class="row p-2">
                                                 <div class="col-lg-3">
                                                     <input class="form-control" id="cpfBeneficiario" type="text" placeholder="CPF do Detento">
@@ -163,8 +164,6 @@ function chama_modal_cad_detento() {
     $("#FRM_CAD_PRESIDIARIO").trigger("reset");    
     $("#modal_cadastra_presidiario").modal("show");
 }
-</script>
-
 </script>
 
 </body>

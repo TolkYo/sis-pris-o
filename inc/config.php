@@ -11,4 +11,3 @@ $banco = "bd_prisao";
 
 
 $conn = new mysqli($host, $usuario, $senha, $banco) or die("Falha na conexão: " . $conn->connect_error);
-$nomeAPP = 'Teste';
