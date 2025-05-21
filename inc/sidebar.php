@@ -41,9 +41,9 @@
 
   <!-- Page Content Holder -->
   <div id="content">
-          <!-- <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+          <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
             <i class="glyphicon glyphicon-align-left"></i>
-          </button> -->
+          </button> 
           <!--Conteudo fica aqui(eu acho)-->
   </div>
 </div>

@@ -1,0 +1,62 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fafafa;
+}
+.wrapper{
+    display:flex;
+    min-height:100vh;
+}
+
+#sidebar-roger {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 250px;
+    height: 100%;    
+    background:#313131;
+    transition: width .3s erase;
+    overflow:hidden;
+}
+
+#content{
+    flex:1;
+    padding:20px;
+    transition:all .3s;
+}
+
+.sidebar-nav {
+    position:absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 5px; /* verificar isso melhor dps*/
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color:rgb(0, 51, 190);
+    background: rgb(255, 255, 255)
+}
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: 0;
+}
+.sidebar-nav > .sidebar-cabeca h3 {
+    height: 65px;
+    padding-right: 12px;
+    color: rgb(255, 255, 255);
+    line-height: 65px;
+    font-size: 23px;
+}
+

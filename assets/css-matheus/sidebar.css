@@ -108,7 +108,7 @@ a[aria-expanded="true"] {
 }
 
 a[data-toggle="collapse"] {
-  position: relative;
+  position: absolute;
 }
 
 a[aria-expanded="false"]::before,
