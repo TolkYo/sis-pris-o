@@ -91,7 +91,7 @@ if (!$nome) {
                                         <div class="col-sm-12">                                            
                                             <div class="row p-2">
                                                 <div class="col-lg-3">
-                                                    <input class="form-control" id="cpfBeneficiario" type="text" placeholder="CPF do Detento">
+                                                    <input class="form-control" id="cpfBeneficiario" type="text" placeholder="CPF do Detento" onchange="checa_cadastro('CPF');>
                                                 </div>
                                                 <div class="col-lg-3">
                                                     <input class="form-control" id="nomeBeneficiario" type="text" placeholder="Nome do Detento">
