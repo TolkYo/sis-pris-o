@@ -53,6 +53,7 @@ include '../inc/funcoes/funcao.php';
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../inc/roger.css">
 </head> 
 <body>
 <div class="tap-top"><i data-feather="chevrons-up"></i></div>
@@ -63,7 +64,7 @@ include '../inc/funcoes/funcao.php';
     <div class="page-body-wrapper">
         <div class="sidebar-wrapper">
             <div>
-                <?php include '../inc/sidebar.php'; ?>
+                <?php include '../inc/side-bar.php'; ?>
             </div>
         </div>
         <div class="page-body" style="background-color:Lightgray;">
@@ -143,8 +144,8 @@ include '../inc/funcoes/funcao.php';
 <script src="../assets/js/prism/prism.min.js"></script>
 <script src="../assets/js/clipboard/clipboard.min.js"></script>
 <script src="../assets/js/custom-card/custom-card.js"></script>
-<script src="../assets/js/notify/bootstrap-notify.min.js"></script>
-<script src="../assets/js/notify/index.js"></script>
+<!-- <script src="../assets/js/notify/bootstrap-notify.min.js"></script>
+<script src="../assets/js/notify/index.js"></script> -->
 <script src="../assets/js/typeahead/handlebars.js"></script>
 <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
 <script src="../assets/js/typeahead/typeahead.custom.js"></script>

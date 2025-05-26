@@ -1,8 +1,8 @@
 window.onload= function () {
-    const sidebar = document.getElementById("sidebar");
-    const tgButton = document.getElementById("sidebarCollapse");
+    const sidebar = document.getElementById("sidebarroger");
+    const tgButton = document.getElementById("sidebarbutton");
 
     tgButton.addEventListener("click", () => {
-        sidebar.classList.toggle("active");
+        sidebar.classList.toggle("collapsed");
     })
 };    

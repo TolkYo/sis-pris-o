@@ -73,8 +73,7 @@ const chama_modal_edit_detento = (preso) => {
                 $("#txt_cela").val(dados.cela);
                 $("#txt_tipo_crime").val(dados.tipo_crime);
                 $("#txt_status").val(dados.status);
-            } else {
-                $("#div_programa_beneficiario").hide();
+            } else {                
                 $("#DIV_MSG_BENEFICIARIO_GERAL").html(dados.msg);
 
             }
@@ -130,6 +129,37 @@ const edita_detento = () => {
                 setTimeout(() => {
                     $("#DIV_MSG_EDIT_DETENTO_GERAL").html('');
                 }, 3000);
+            }
+        }
+    });
+}
+
+function checa_cadastro(){
+    const cpfDetento = $("#cpf_detento").val();
+
+    const formData = new FormData();
+    formData.append('cpfDetento', cpfDetento);
+
+    $.ajax({
+        data: formData,
+        url: '../run/checa_cpf.php',
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        success: (data) => {
+            const dados = JSON.parse(data);
+            if (dados.retorno == 1) {
+                $("#DIV_MSG_EDIT_DETENTO_GERAL").html(
+                    ' <br><img src="../assets/images/ajax-loader.gif" height="30" width="30"> <b>Carregando dados, aguarde... </b><br>.'
+                );
+                $("#DIV_MSG_EDIT_DETENTO_GERAL").html(dados.mensagemSucesso);
+                setTimeout(() => {
+                    $("#DIV_MSG_EDIT_DETENTO_GERAL").html('');
+                }, 4000);
+            } else {
+                $("#DIV_MSG_EDIT_DETENTO_GERAL").html(dados.mensagemErro);
+                chama_modal_edit_detento();
+
             }
         }
     });

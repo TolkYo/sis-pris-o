@@ -58,7 +58,7 @@ if (!$nome) {
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
-    <link rel="stylesheet" href="../assets/css-matheus/sidebar.css">
+    <link rel="stylesheet" href="../inc/roger.css">
 </head> 
 <body>
 <div class="tap-top"><i data-feather="chevrons-up"></i></div>
@@ -68,9 +68,11 @@ if (!$nome) {
     <!-- por menu top aq  -->
     <div class="page-body-wrapper">
         <div class="sidebar-wrapper">
+            
             <div>
-                <?php //include '../inc/sidebar.php'; ?>
+                <?php include '../inc/side-bar.php'; ?>
             </div>
+            
         </div>
         <div class="page-body" style="background-color:Lightgray;">
             <div class="container-fluid">
@@ -133,6 +135,7 @@ if (!$nome) {
 
     
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="../assets/js/bootstrap/popper.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
@@ -157,6 +160,7 @@ if (!$nome) {
 <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
 <script src="../assets/js/script.js"></script>
 <script src="../inc/js/js_detentos.js"></script>
+<script src="../inc/js/js_sidebar.js"></script>
 
 
 <script>
