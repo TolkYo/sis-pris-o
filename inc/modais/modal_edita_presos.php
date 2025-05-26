@@ -11,7 +11,7 @@
                 <div class="card" style="background-color:Gray;">
                     <div class="card-body">
                         <div id="div_check_cns">
-                            <input type="hidden" id="id_preso_hidden">
+                            <input type="text" id="id_preso_hidden">
                             <form class="theme-form" id="FRM_EDIT_PRESIDIARIO">
                                 <div class="row">
                                     <div class="col-xl-4"><br>
@@ -60,12 +60,12 @@
                                             placeholder="Nome da Mãe">
                                     </div>
                                     <div class="col-xl-6"><br>
-                                        <label class="col-form-label pt-0"
-                                            for="nome_mae"><b>Status</b></label>
-                                        <input class="form-control" id="txt_status"
-                                            type="text" aria-describedby="emailHelps"
-                                            placeholder="Status">
-                                    </div>                                    
+                                        <label for="reincidencia"><b>Reincidente?*</b></label><br>
+                                        <select id="txt_reincidencia" class="form-select" aria-label="Default select example">
+                                            <option value="N"> Não</option>
+                                            <option value="S"> Sim</option>                                       
+                                        </select>
+                                    </div>                                   
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-4"><br>

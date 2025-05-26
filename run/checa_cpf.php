@@ -3,7 +3,7 @@
 include '../inc/config.php';
 include '../inc/funcoes/funcoes_basicas.php';
 
-$doc = $_POST['doc'];
+//$doc = $_POST['doc'];
 $cpfDetento = desformataCampos(trim($_POST['cpfDetento']));
 
     if (!$cpfDetento) {
@@ -24,6 +24,7 @@ $numRows = mysqli_num_rows($result);
 
 if ($numRows > 0) {
     while ($row = mysqli_fetch_array($result)) {
+        $retJson['id_preso'] = $row['id_preso'];
         $retJson['cpf_detento'] = $row['cpf'];
         $retJson['nome_detento'] = $row['nome'];
         $retJson['data_nascimento'] = $row['data_nascimento'];
@@ -32,16 +33,15 @@ if ($numRows > 0) {
         $retJson['pavilhao'] = $row['pavilhao'];
         $retJson['cela'] = $row['id_cela'];
         $retJson['tipo_crime'] = $row['id_infracao'];
-        $retJson['reincidente'] = $row['reincidente?'];
-
-        $retornoJSON['mensagemErro'] = '<div class="alert alert-warning inverse alert-dismissible fade show" role="alert"><i class="fa fa-exclamation-triangle"></i> 
+        $retJson['reincidente'] = $row['reincidente'];
+//echo $retJson['reincidente'];exit
+        $retJson['mensagemErro'] = '<div class="alert alert-warning inverse alert-dismissible fade show" role="alert"><i class="fa fa-exclamation-triangle"></i> 
         <b>Este Cpf já está cadastrado</b> ! <br>
         <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
-        <button class="btn btn-primary" onclick="edita_detento();">Carregar Dados do Detento</button>
         </div>';
         $retJson['retorno'] = 0;
 
-        echo $processaJSON = json_encode($retornoJSON);
+        echo $processaJSON = json_encode($retJson);
         exit;
     }
 }

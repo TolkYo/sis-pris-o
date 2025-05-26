@@ -18,7 +18,7 @@
                                             for="cpf_detento"><b>CPF*</b></label>
                                         <input class="form-control" id="cpf_detento"
                                             type="number" aria-describedby="emailHelps"
-                                            placeholder="CPF">
+                                            placeholder="CPF" onchange="checa_cadastro('CPF');">
                                     </div>
                                     <div class="col-xl-8"><br>
                                         <label class="col-form-label pt-0"
@@ -46,18 +46,19 @@
                                 <div class="row">
                                     <div class="col-xl-6"><br>
                                         <label class="col-form-label pt-0"
-                                            for="nome_pai"><b>Nome do Pai</b> sem abreviação</label>
-                                        <input class="form-control" id="nome_pai"
-                                            type="text" aria-describedby="emailHelps"
-                                            placeholder="Nome do Pai">
-                                    </div>
-                                    <div class="col-xl-6"><br>
-                                        <label class="col-form-label pt-0"
                                             for="nome_mae"><b>Nome da Mãe*</b> sem abreviação</label>
                                         <input class="form-control" id="nome_mae"
                                             type="text" aria-describedby="emailHelps"
                                             placeholder="Nome da Mãe">
                                     </div>
+                                    <div class="col-xl-6"><br>
+                                        <label for="reincidencia"><b>Reincidente?*</b></label><br>
+                                        <select id="reincidencia" class="form-select" aria-label="Default select example">
+                                            <option value="N"> Não</option>
+                                            <option value="S"> Sim</option>                                       
+                                        </select>
+                                    </div> 
+                                    
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-4"><br>

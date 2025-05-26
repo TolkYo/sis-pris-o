@@ -72,7 +72,7 @@ const chama_modal_edit_detento = (preso) => {
                 $("#txt_pavilhao").val(dados.pavilhao);
                 $("#txt_cela").val(dados.cela);
                 $("#txt_tipo_crime").val(dados.tipo_crime);
-                $("#txt_status").val(dados.status);
+                $("#txt_reincidencia").val(dados.reincidente);
             } else {                
                 $("#DIV_MSG_BENEFICIARIO_GERAL").html(dados.msg);
 
@@ -90,6 +90,7 @@ const edita_detento = () => {
     const nomeDetento = $("#txt_nome_detento").val();
     const dataNascimento = $("#txt_data_nascimento").val();
     const nomeMae = $("#txt_nome_mae").val();
+    const reincidente = $("#txt_reincidencia").val();
     const estadoCivil = $("#txt_estado_civil").val();
     const pavilhao = $("#txt_pavilhao").val();
     const cela = $("#txt_cela").val();
@@ -102,6 +103,7 @@ const edita_detento = () => {
     formData.append('nomeDetento', nomeDetento);
     formData.append('dataNascimento', dataNascimento);
     formData.append('nomeMae', nomeMae);
+    formData.append('reincidente', reincidente);
     formData.append('estadoCivil', estadoCivil);
     formData.append('pavilhao', pavilhao);
     formData.append('cela', cela);
@@ -149,17 +151,32 @@ function checa_cadastro(){
         success: (data) => {
             const dados = JSON.parse(data);
             if (dados.retorno == 1) {
-                $("#DIV_MSG_EDIT_DETENTO_GERAL").html(
+                $("#DIV_MSG_CAD_DETENTO_GERAL").html(
                     ' <br><img src="../assets/images/ajax-loader.gif" height="30" width="30"> <b>Carregando dados, aguarde... </b><br>.'
                 );
-                $("#DIV_MSG_EDIT_DETENTO_GERAL").html(dados.mensagemSucesso);
+                $("#DIV_MSG_CAD_DETENTO_GERAL").html(dados.mensagemSucesso);
                 setTimeout(() => {
-                    $("#DIV_MSG_EDIT_DETENTO_GERAL").html('');
+                    $("#DIV_MSG_CAD_DETENTO_GERAL").html('');                    
                 }, 4000);
             } else {
-                $("#DIV_MSG_EDIT_DETENTO_GERAL").html(dados.mensagemErro);
-                chama_modal_edit_detento();
+                $("#FRM_EDIT_PRESIDIARIO").trigger("reset");
+                $("#DIV_MSG_CAD_DETENTO_GERAL").html(dados.mensagemErro);
+                
+                $("#modal_cadastra_presidiario").modal("hide");                 
+                 $('#id_preso_hidden').val(dados.id_preso);         
+                $('#txt_cpf_detento').val(dados.cpf_detento);
+                $("#txt_nome_detento").val(dados.nome_detento);
+                $("#txt_data_nascimento").val(dados.data_nascimento);
+                $("#txt_estado_civil").val(dados.estado_civil);                
+                $("#txt_nome_mae").val(dados.nome_mae);
+                $("#reincidencia").val(dados.reincidente);
+                $("#txt_pavilhao").val(dados.pavilhao);
+                $("#txt_cela").val(dados.cela);
+                $("#txt_tipo_crime").val(dados.tipo_crime);
+                $("#modal_edita_presidiario").modal("show");
 
+                
+                
             }
         }
     });

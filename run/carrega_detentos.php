@@ -41,26 +41,28 @@ if (!$id_detento) {
     //echo $sqlQuery;exit;
 
     if (!$result) {
-        die('Erro ao consultar beneficiário: ' . $id_detento . '<br>' . $mysqli->error);
+        die('Erro ao consultar Detento: ' . $id_detento . '<br>' . $mysqli->error);
     }
     
     $numRows = $result->num_rows;
     if ($numRows > 0) {
-        while ($row = $result->fetch_assoc()) {
-           
-            $retJson['cpf_detento'] = $row['cpf'];
-            $retJson['nome_detento'] = $row['nome'];
-            $retJson['data_nascimento'] = $row['data_nascimento'];
-            $retJson['estado_civil'] = $row['estado_civil'];
-            $retJson['nome_mae'] = $row['filiacao'];
-            $retJson['pavilhao'] = $row['pavilhao'];
-            $retJson['cela'] = $row['id_cela'];
-            $retJson['tipo_crime'] = $row['id_infracao'];
-            $retJson['status'] = $row['esta_ativo?'];
-            $retJson['retorno'] = 1;
+        while ($row = mysqli_fetch_array($result)) {
+        $retJson['id_preso'] = $row['id_preso'];
+        $retJson['cpf_detento'] = $row['cpf'];
+        $retJson['nome_detento'] = $row['nome'];
+        $retJson['data_nascimento'] = $row['data_nascimento'];
+        $retJson['estado_civil'] = $row['estado_civil'];
+        $retJson['nome_mae'] = $row['filiacao'];
+        $retJson['pavilhao'] = $row['pavilhao'];
+        $retJson['cela'] = $row['id_cela'];
+        $retJson['tipo_crime'] = $row['id_infracao'];
+        $retJson['reincidente'] = $row['reincidente'];
+//echo $retJson['reincidente'];exit
+        $retJson['retorno'] = 1;
 
-            echo $processaJSON = json_encode($retJson);
-        }
+        echo $processaJSON = json_encode($retJson);
+        exit;
+    }
     } else {
         $msg = '
         <div class="alert alert-warning inverse alert-dismissible fade show" role="alert"><i class="fa fa-exclamation-triangle"></i> 

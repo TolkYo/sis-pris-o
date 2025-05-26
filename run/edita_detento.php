@@ -11,11 +11,12 @@ $estadoCivil = $_POST['estadoCivil'];
 $pavilhao = $_POST['pavilhao'];
 $numCela = $_POST['cela'];
 $tpoCrime = $_POST['crime'];
+$reincidente = $_POST['reincidente'];
 
 $compriNomeDet = strlen($nomeDetento);
 $compriNomeMae = strlen($nomeMae);
 
-//echo $estadoCivil;exit;
+//echo $reincidente;exit;
 
 if ($cpfDetento) {
     $cpf = validaCPF($cpfDetento);
@@ -91,6 +92,16 @@ if (!$tpoCrime) {
     exit;
 }
 
+if (!$reincidente) {
+    $retornoJSON['retorno'] = 0;
+    $retornoJSON['mensagemErro'] = '<div class="alert alert-warning inverse alert-dismissible fade show" role="alert"><i class="fa fa-exclamation-triangle"></i> 
+    <b></b>
+    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+    echo $processaJSON = json_encode($retornoJSON);
+    exit;
+}
+
 if($compriNomeDet < 7){
     $retornoJSON['retorno'] = 0;
     $retornoJSON['mensagemErro'] = '<div class="alert alert-warning inverse alert-dismissible fade show" role="alert"><i class="fa fa-exclamation-triangle"></i> 
@@ -116,19 +127,19 @@ $sqlP = "
     data_nascimento = '$dataNascimento',
     filiacao = '$nomeMae',
     estado_civil = '$estadoCivil',
+    reincidente = '$reincidente',
     cpf = '$cpfDetento',
-    pavilhao = '$pavilhao',
-    reincidente = 'N',
+    pavilhao = '$pavilhao',    
     id_cela = '$numCela',
     id_infracao = '$tpoCrime'
+    
     WHERE id_preso = '$id_preso'
+
 ";
 //echo $sqlP;exit;
-//$execute = pg_query($sqlP) or die('Erro ao inserir dados do beneficiário: ' . pg_last_error());
 $execute = mysqli_query($conn, $sqlP) or die('Erro ao inserir dados do detento: ' . mysqli_error($conn));
 $row = mysqli_affected_rows($conn);
-//
-
+//echo $row;exit;
 
 if($row > 0){
     $retornoJSON['retorno'] = 1;

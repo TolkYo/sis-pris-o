@@ -7,6 +7,7 @@ include '../inc/funcoes/funcao.php';
 
 //$nomeProd = localizaDados($conn ,'produtos', 'nome', 'id_produto = 1');
 //echo $nomeProd;exit;
+$nome='';
 ?>
 
 <!DOCTYPE html>
@@ -109,7 +110,7 @@ include '../inc/funcoes/funcao.php';
                                 </div>
                                 <div class="card-body">
                                     <div id="tabela-dados-cids">
-                                        <?php ?>
+                                        <?php echo lista_visitas($nome, $conn)?>
                                     </div>
                                 </div>
                             </div>
