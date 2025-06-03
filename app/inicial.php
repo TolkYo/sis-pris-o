@@ -23,35 +23,15 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
         rel="stylesheet">
 
-    <!-- ico-font-->
-    <link rel="stylesheet" href="../assets/font-awesome-4/css/font-awesome.min.css">
-    <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/icofont.css">
-    <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify.css">
-    <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
-    <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/prism.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/calendar.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
-
-
     <!--não sei pq o font awesome do projeto n funciona ent to usando esse CDN temporariamente desculpa sou burro-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="../assets/css-matheus/inicial.css">
+    <link rel="stylesheet" href="../assets/css-matheus/style.css">
 
 </head>
 
-<body>
+<body id="sterival">
 
     <nav class="navbar sis-o"> 
         <div class="container">
@@ -70,7 +50,7 @@
                 <h1>Sistema de Gestão Penitenciária</h1>
                 <p>Monitore, gerencie e cadastre presidiarios</p>
 
-                <b><button type="button" class="btn btn-primary btn-lg">Acessar Sistema</button></b>
+                <b><button type="button" id="acessarbtn" class="btn btn-primary btn-lg">Acessar Sistema</button></b>
                 
             </div>
         </div>
@@ -80,26 +60,23 @@
             <div class="row">
 
                 <div class="col-md-4">
-                    <i class="fas fa-house fa-3x"></i>
-                    <h2> casa mt foda</h2>
-                    <h3>definitivamente, é uma casa muito foda</h3>
-                    <p> real.</p>
+                    <i class="fas fa-user fa-3x"></i>
+                    <h2>Perfis Detalhados</h2>
+                    <h3>Cadastro, realocações e dados do detento</h3>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="fas fa-tasks fa-3x"></i>
+                    <h2>Alguma coisa</h2>
+                    <h3>ehhhhhh</h3>
                 </div>
 
                 <div class="col-md-4">
                     <i class="fas fa-landmark fa-3x"></i>
-                    <h2> museu mt foda</h2>
-                    <h3>definitivamente, é um museu muito foda como centraliza?</h3>
-                    <p> real.</p>
+                    <h2>Integração com justiça.</h2>
+                    <h3>ehhhhhhhhhhhh</h3>
                 </div>
-
-                <div class="col-md-4">
-                    <i class="fas fa-user fa-3x"></i>
-                    <h2> casa mt foda</h2>
-                    <h3>definitivamente, é uma casa muito foda</h3>
-                    <p> real.</p>
-                </div>
-
+                
             </div>
         </div>
     </div>
