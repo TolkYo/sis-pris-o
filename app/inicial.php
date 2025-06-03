@@ -67,14 +67,14 @@
 
                 <div class="col-md-4">
                     <i class="fas fa-tasks fa-3x"></i>
-                    <h2>Alguma coisa</h2>
-                    <h3>ehhhhhh</h3>
+                    <h2>Listagem de internos</h2>
+                    <h3>Visitas agendáveis, visitas jurídicas</h3>
                 </div>
 
                 <div class="col-md-4">
                     <i class="fas fa-landmark fa-3x"></i>
-                    <h2>Integração com justiça.</h2>
-                    <h3>ehhhhhhhhhhhh</h3>
+                    <h2>Integração com a Justiça.</h2>
+                    
                 </div>
                 
             </div>
